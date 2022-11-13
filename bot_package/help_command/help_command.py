@@ -1,4 +1,4 @@
-from bot.help_command import commands_list as cmd_list
+from bot_package.help_command import commands_list as cmd_list
 
 separate = '-' * 30
 

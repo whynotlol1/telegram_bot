@@ -1,4 +1,4 @@
-from bot.text_files.read_files import read_file as read
+from bot_package.text_files.read_files import read_file as read
 from telebot import TeleBot
 
 
