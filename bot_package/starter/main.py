@@ -1,12 +1,11 @@
 from bot_package.help_command import help_command, commands_list as cmd_list
+from bot_package.other_commands import generate_password_command
+from bot_package.other_commands import format_text_command
+from bot_package.other_commands import cprice_command
 from bot_package.starter import initializer
 from telebot import types
 
 bot = initializer.bot
-
-from bot_package.other_commands import generate_password_command
-from bot_package.other_commands import format_text_command
-from bot_package.other_commands import cprice_command
 
 
 @bot.message_handler(commands=['start'])
