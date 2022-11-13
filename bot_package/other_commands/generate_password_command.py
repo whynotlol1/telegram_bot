@@ -1,4 +1,4 @@
-from bot_package.starter.main import bot
+from bot_package.starter.initializer import bot
 import secrets
 import string
 

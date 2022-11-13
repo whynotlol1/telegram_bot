@@ -1,4 +1,4 @@
-from bot_package.starter.main import bot
+from bot_package.starter.initializer import bot
 from bot_package import extras
 
 
