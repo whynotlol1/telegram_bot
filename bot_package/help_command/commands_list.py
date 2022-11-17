@@ -5,7 +5,7 @@ commands_list = {
     },
     "generate_password": {
         "description": "Description: generates a random password for a given char limit.",
-        "arguments": "Arguments: char_limit"
+        "arguments": "Arguments: char_limit, passwords_amount"
     },
     "format_text": {
         "description": "Description: automatically formats given text for you.",
