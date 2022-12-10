@@ -32,6 +32,11 @@ def call_text_format(message):
 def call_cprice_command(message):
     cprice_command.crypto_price(message)
 
+    
+@bot.message_handler(commands=['game'])
+def call_game_command(message):
+    game.game_realization(message)
+    
 
 if __name__ == '__main__':
     bot.polling(none_stop=True, interval=0)
