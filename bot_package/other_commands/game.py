@@ -36,9 +36,9 @@ def guess_password(message):
         message_text = ''
         for symbol in message.text:
             if symbol not in correct_password:
-                message_text += f'{symbol} is not a correct symbol.\n'
+                message_text += f'"{symbol}" is not a correct symbol.\n'
             else:
-                message_text += f'{symbol} is a correct symbol. But it might be in the wrong place\n'
+                message_text += f'"{symbol}" is a correct symbol. But it might be in the wrong place\n'
         bot.send_message(message.chat.id, message_text)
         msg = bot.send_message(message.chat.id, 'Try again:')
         bot.register_next_step_handler(msg, guess_password)
