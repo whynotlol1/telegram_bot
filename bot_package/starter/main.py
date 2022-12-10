@@ -2,6 +2,7 @@ from bot_package.other_commands import generate_password_command
 from bot_package.other_commands import format_text_command
 from bot_package.other_commands import cprice_command
 from bot_package.help_command import help_command
+from bot_package.other_commands import game
 from bot_package.starter import initializer
 
 bot = initializer.bot
