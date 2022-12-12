@@ -18,27 +18,37 @@ def game_realization(message):
     global correct_password
     correct_password = password_generator()
     print(correct_password)
-    bot.send_message(message.chat.id, 'To stop the game, type "stop". There are 10 digits in the password.')
+    bot.send_message(message.chat.id, 'To stop the game, type "stop". There are 10 symbols in the password.')
     msg = bot.send_message(message.chat.id, 'Guess the password:')
     bot.register_next_step_handler(msg, guess_password)
 
 
 def guess_password(message):
+    global correct_password
     if message.text == 'stop':
         bot.send_message(message.chat.id, 'Stopping the game...')
         return
-    if message.text == correct_password:
-        bot.send_message(message.chat.id, 'You guessed the password!')
-        return
+    if len(message.text) == 10:
+        if message.text == correct_password:
+            bot.send_message(message.chat.id, 'You guessed the password!')
+            return
+        else:
+            bot.send_message(message.chat.id, 'Wrong password, try again.')
+            bot.send_message(message.chat.id, 'There are some tips:')
+            message_text = ''
+            for symbol in message.text:
+                if symbol in correct_password and message.text.index(symbol) == correct_password.index(symbol):
+                    message_text += f'{symbol}'
+                else:
+                    message_text += '*'
+            if len(message_text) < 10:
+                message_text += '*' * (10 - len(message_text))
+            message_text += '\n- these are the symbols you guessed correctly.'
+            message_text += '\n"*" - the symbols left t guess.'
+            bot.send_message(message.chat.id, message_text)
+            msg = bot.send_message(message.chat.id, 'Try again:')
+            bot.register_next_step_handler(msg, guess_password)
     else:
-        bot.send_message(message.chat.id, 'Wrong password, try again.')
-        bot.send_message(message.chat.id, 'There are some tips:')
-        message_text = ''
-        for symbol in message.text:
-            if symbol not in correct_password:
-                message_text += f'"{symbol}" is not a correct symbol.\n'
-            else:
-                message_text += f'"{symbol}" is a correct symbol. But it might be in the wrong place\n'
-        bot.send_message(message.chat.id, message_text)
+        bot.send_message(message.chat.id, 'The password must contain 10 symbols.')
         msg = bot.send_message(message.chat.id, 'Try again:')
         bot.register_next_step_handler(msg, guess_password)
