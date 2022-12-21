@@ -4,7 +4,7 @@ RUSSIAN / РУССКИЙ:
 
 ENGLISH:
 
-Telegram bot "Telegram Utils Bot" - a project made with educational purpose using python PyTelegramBotApi framework. In the future I am planning to rewrite the project with asyncronous version of the framework but for now the only work on the project is going to be directed toward improving old functions and adding some new ones. You can use the code for your purpose. When using large parts of the code, please mention the author (github: @whynotlol1 or discord: @cat dev#7899).
+Telegram bot "Telegram Utils Bot" - a project made with educational purpose using python PyTelegramBotApi framework. In the future I am planning to rewrite the project with asynchronous version of the framework but for now the only work on the project is going to be directed toward improving old functions and adding some new ones. You can use the code for your purpose. When using large parts of the code, please mention the author (github: @whynotlol1 or discord: @cat dev#7899).
 
 
 (c) cat dev
