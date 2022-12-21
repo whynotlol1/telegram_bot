@@ -53,11 +53,11 @@ def guess_password(message):
         else:
             wrong_password(message.text)
     elif len(message.text) > 10:
-        if message.text[0:11] == correct_password:
+        if message.text[0:10] == correct_password:
             bot.send_message(message.chat.id, 'You guessed the password!')
             return
         else:
-            wrong_password(message.text[0:11])
+            wrong_password(message.text[0:10])
 
         bot.send_message(message.chat.id, 'The password must contain 10 symbols.')
         msg = bot.send_message(message.chat.id, 'Try again:')
