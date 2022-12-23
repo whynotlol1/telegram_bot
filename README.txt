@@ -16,5 +16,5 @@ year: 2022-2023
 contacts:
 ---------
 discord: @cat dev#7899
-telegram: @cat_dev
+telegram: @cat_dev_lol
 github: @whynotlol1
