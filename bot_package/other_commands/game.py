@@ -32,11 +32,12 @@ def check(message):
     else:
         bot.send_message(message.chat.id, 'You didn`t guess the password.')
         message_text = ''
-        for symbol in password_guess:
-            if symbol in correct_password and password_guess.index(symbol) == correct_password.index(symbol):
-                message_text += symbol
-            else:
-                message_text += '*'
+         for i in range(len(password_guess)):
+            for j in range(len(correct_password)):
+                if i == j and password_guess[i] == correct_password[j]:
+                    message_text += password_guess[i]
+                else:
+                    message_text += '*'
         if len(message_text) < 10:
             message_text += '*' * (10 - len(message_text))
         if message_text != '**********':
