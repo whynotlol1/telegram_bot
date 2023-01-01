@@ -15,4 +15,8 @@ commands_list = {
         "description": "Description: shows the price of a given crypto.",
         "arguments": "Arguments: crypto_name"
     },
+    "translate": {
+        "description": "Description: translates given text from a given language to a given language.",
+        "arguments": "Arguments: text, source_language, target_language"
+    }
 }
