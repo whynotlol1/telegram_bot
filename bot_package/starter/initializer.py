@@ -1,12 +1,14 @@
-from bot_package.text_files.read_files import read_first_line as read_file
+from bot_package.text_files.read_files import read_all_lines as read_everything
+from bot_package.text_files.read_files import read_first_line as read_token
 from telebot import TeleBot
 
 
 bot_data = {
     "version": "v1.3",
-    "name": "Telegram Utils Bot"
+    "name": "Telegram Utils Bot",
+    "contacts": read_everything("contacts.txt")
 }
 
-token = read_file("token.txt")
+token = read_token("token.txt")
 
 bot = TeleBot(token=token)
