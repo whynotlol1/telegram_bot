@@ -3,7 +3,7 @@ from telebot import TeleBot
 
 
 bot_data = {
-    "version": "v1.2",
+    "version": "v1.3",
     "name": "Telegram Utils Bot"
 }
 
