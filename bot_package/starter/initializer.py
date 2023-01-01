@@ -1,5 +1,5 @@
-from bot_package.text_files.read_files import read_all_lines as read_everything
-from bot_package.text_files.read_files import read_first_line as read_token
+from bot_package.text_files.__read_files__ import read_all_lines as read_everything
+from bot_package.text_files.__read_files__ import read_first_line as read_token
 from telebot import TeleBot
 
 
