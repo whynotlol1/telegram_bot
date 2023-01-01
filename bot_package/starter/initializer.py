@@ -7,6 +7,6 @@ bot_data = {
     "name": "Telegram Utils Bot"
 }
 
-token = read_file("token.txt")
+token = read_file("token.txt")[0]
 
 bot = TeleBot(token=token)
