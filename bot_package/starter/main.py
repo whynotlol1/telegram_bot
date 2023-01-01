@@ -43,3 +43,4 @@ def text_handler(message):
     
 if __name__ == '__main__':
     bot.polling(none_stop=True, interval=0)
+    print('Bot is running...')
