@@ -1,4 +1,4 @@
-from .initializer import bot
+from bot_package.starter.initializer import bot
 from telebot import types
 
 
