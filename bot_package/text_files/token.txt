@@ -1,6 +1,1 @@
 [REDACTED]
-
-this text will not be read by the code:
-Do not share the token with anyone. This token gives full control over your bot, so it should be kept secret.
-Keep your token safe and secure.
-If you accidentally share your token, revoke it immediately.
