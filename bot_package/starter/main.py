@@ -1,5 +1,6 @@
 from bot_package.other_commands import generate_password_command
 from bot_package.other_commands import format_text_command
+from bot_package.other_commands import translate_command
 from bot_package.other_commands import cprice_command
 from bot_package.help_command import help_command
 from bot_package.starter import initializer
@@ -32,13 +33,13 @@ def call_text_format(message):
 @bot.message_handler(commands=['cprice'])
 def call_cprice_command(message):
     cprice_command.crypto_price(message)
- 
 
-@bot.message_handler(content_types=['text'])
-def call_text_handler(message):
-    handlers.text_handler(message)
-    
-    
+
+@bot.message_handler(commands=['translate'])
+def call_translate_command(message):
+    translate_command.translate(message)
+
+
 if __name__ == '__main__':
     bot.polling(none_stop=True, interval=0)
     print('Bot is running...')
