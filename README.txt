@@ -12,11 +12,6 @@ bot_package/starter/main.py
 
 (c) cat dev
 
-project contributors:
-@whynotlol1 (me) - idea + most coding
-StackOverflow - some tips =D
-
-
 
 country, city: Russia, Saint-Petersburg
 name: Petrov Roman
@@ -27,3 +22,8 @@ contacts:
 discord: @cat dev#7899
 telegram: @cat_dev_lol
 github: @whynotlol1
+
+special thanks to:
+------------------
+StackOverflow;
+@xsafterstd
