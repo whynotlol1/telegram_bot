@@ -10,6 +10,12 @@ Telegram bot "Telegram Utils Bot" - a project made with educational purpose usin
 ЗАПУСК БОТА / STARTING THE BOT:
 bot_package/starter/main.py
 
+special thanks to:
+------------------
+StackOverflow;
+@xsafterstd
+
+
 (c) cat dev
 
 
@@ -22,8 +28,3 @@ contacts:
 discord: @cat dev#7899
 telegram: @cat_dev_lol
 github: @whynotlol1
-
-special thanks to:
-------------------
-StackOverflow;
-@xsafterstd
