@@ -3,6 +3,7 @@ from bot_package.other_commands import format_text_command
 from bot_package.other_commands import cprice_command
 from bot_package.help_command import help_command
 from bot_package.starter import initializer
+from bot_package.starter import handlers
 
 bot = initializer.bot
 
