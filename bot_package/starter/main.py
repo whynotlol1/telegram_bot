@@ -31,7 +31,15 @@ def call_text_format(message):
 @bot.message_handler(commands=['cprice'])
 def call_cprice_command(message):
     cprice_command.crypto_price(message)
-    
+ 
 
+@bot.message_handler(content_types=['text'])
+def text_handler(message):
+    if message.text in ['Help', 'help']:
+        bot.send_message(message.chat.id, 'Sorry, bot does not understand you. Maybe you want to use /help command?')
+    else:
+        bot.send_message(message.chat.id, 'Sorry, bot does not understand you.')
+    
+    
 if __name__ == '__main__':
     bot.polling(none_stop=True, interval=0)
