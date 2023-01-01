@@ -9,6 +9,12 @@ Telegram bot "Telegram Utils Bot" - a project made with educational purpose usin
 
 (c) cat dev
 
+project contributors:
+@whynotlol1 (me) - idea + most coding
+StackOverflow - some tips =D
+
+
+
 country, city: Russia, Saint-Petersburg
 name: Petrov Roman
 year: 2022-2023
