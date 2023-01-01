@@ -2,7 +2,6 @@ from bot_package.other_commands import generate_password_command
 from bot_package.other_commands import format_text_command
 from bot_package.other_commands import cprice_command
 from bot_package.help_command import help_command
-from bot_package.other_commands import game
 from bot_package.starter import initializer
 
 bot = initializer.bot
@@ -32,11 +31,6 @@ def call_text_format(message):
 @bot.message_handler(commands=['cprice'])
 def call_cprice_command(message):
     cprice_command.crypto_price(message)
-
-    
-@bot.message_handler(commands=['game'])
-def call_game_command(message):
-    game.game_realization(message)
     
 
 if __name__ == '__main__':
