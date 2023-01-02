@@ -18,5 +18,9 @@ commands_list = {
     "translate": {
         "description": "Description: translates given text from a given language to a given language.",
         "arguments": "Arguments: text, source_language, target_language"
+    },
+    "text_to_speech": {
+        "description": "Description: converts given text to speech.",
+        "arguments": "Arguments: text"
     }
 }
