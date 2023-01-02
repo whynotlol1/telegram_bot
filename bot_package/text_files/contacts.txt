@@ -1,3 +1,0 @@
-discord: @cat dev#7899
-github: @whynotlol1
-telegram: @cat_dev_lol
