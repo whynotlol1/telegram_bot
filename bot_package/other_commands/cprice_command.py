@@ -1,5 +1,6 @@
 from bot_package.starter.initializer import bot
 import requests
+import json
 
 
 def get_crypto_price(crypto: str) -> str:
