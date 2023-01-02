@@ -44,6 +44,11 @@ def call_translate_command(message):
 @bot.message_handler(commands=['text_to_speech'])
 def call_text_to_speech_command(message):
     text_to_speech_command.text_to_speech(message)
+    
+    
+@bot.message_handler(content_types=['text'])
+def text_handler(message):
+    bot.send_message(message.chat.id, 'Sorry, the bot doesn\'t understand you!')
 
 
 if __name__ == '__main__':
