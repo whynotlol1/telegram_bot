@@ -1,10 +1,11 @@
 from bot_package.other_commands import generate_password_command
+from bot_package.other_commands import text_to_speech_command
 from bot_package.other_commands import format_text_command
 from bot_package.other_commands import translate_command
 from bot_package.other_commands import cprice_command
 from bot_package.help_command import help_command
 from bot_package.starter import initializer
-from telebot import types
+
 
 bot = initializer.bot
 
@@ -38,6 +39,11 @@ def call_cprice_command(message):
 @bot.message_handler(commands=['translate'])
 def call_translate_command(message):
     translate_command.translate(message)
+
+
+@bot.message_handler(commands=['text_to_speech'])
+def call_text_to_speech_command(message):
+    text_to_speech_command.text_to_speech(message)
 
 
 if __name__ == '__main__':
