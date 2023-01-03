@@ -1,45 +1,22 @@
-from bot_package.other_commands import generate_password_command
-from bot_package.other_commands import format_text_command
-from bot_package.other_commands import translate_command
-from bot_package.other_commands import cprice_command
-from bot_package.help_command import help_command
-from bot_package.starter import initializer
-from bot_package.starter import handlers
-
-bot = initializer.bot
+from bot_package.starter.initializer import bot
+from deep_translator import MyMemoryTranslator
+from deep_translator import exceptions
 
 
-@bot.message_handler(commands=['start'])
-def start_handler(message):
-    bot.send_message(message.chat.id, 'Starting...')
-    bot.send_message(message.chat.id, f'Welcome to {initializer.bot_data["name"]}')
+def translate(message):
+    msg = bot.send_message(message.chat.id, 'Please, enter the text you want to translate')
+    bot.register_next_step_handler(msg, translate_step_2)
 
 
-@bot.message_handler(commands=['help'])
-def call_bot_help_command(message):
-    help_command.bot_help_command(message)
+def translate_step_2(message):
+    msg = bot.send_message(message.chat.id, 'Please, enter the languages you want the text to be translated to and from')
+    text = message.text
+    bot.register_next_step_handler(msg, translate_step_3, text)
 
 
-@bot.message_handler(commands=['generate_password'])
-def call_password_generator(message):
-    generate_password_command.password_generator(message)
-
-
-@bot.message_handler(commands=['format_text'])
-def call_text_format(message):
-    format_text_command.text_formatter(message)
-
-
-@bot.message_handler(commands=['cprice'])
-def call_cprice_command(message):
-    cprice_command.crypto_price(message)
-
-
-@bot.message_handler(commands=['translate'])
-def call_translate_command(message):
-    translate_command.translate(message)
-
-
-if __name__ == '__main__':
-    bot.polling(none_stop=True, interval=0)
-    print('Bot is running...')
+def translate_step_3(message, text):
+    languages = message.text.split(' ')
+    try:
+        bot.send_message(message.chat.id, f'Result:\n{MyMemoryTranslator(source=languages[0], target=languages[1]).translate(text)}')
+    except exceptions.LanguageNotSupportedException:
+        bot.send_message(message.chat.id, 'Seems like you entered the languages incorrectly. Please, try again!')
