@@ -7,21 +7,17 @@ ENGLISH:
 Telegram bot "Telegram Utils Bot" - a project made with educational purpose using python PyTelegramBotApi framework. In the future I am planning to rewrite the project with asynchronous version of the framework but for now the only work on the project is going to be directed toward improving old functions and adding some new ones. You can use the code for your purpose. When using large parts of the code, please mention the author (github: @whynotlol1 or discord: @cat dev#7899).
 
 
-ЗАПУСК БОТА / STARTING THE BOT:
-bot_package/starter/main.py
-
-special thanks to:
-------------------
-StackOverflow;
-@xsafterstd
-
 
 (c) cat dev
-
 
 country, city: Russia, Saint-Petersburg
 name: Petrov Roman
 year: 2022-2023
+
+pecial thanks to:
+------------------
+StackOverflow;
+@xsafterstd
 
 contacts:
 ---------
